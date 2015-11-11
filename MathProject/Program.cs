@@ -18,7 +18,20 @@ namespace MathProject
     {
         public static double RightTriangleSquare(double firstSide, double secondSide, double thirdSide)
         {
-            double square;
+            double square = 0;
+            double max = Math.Max(firstSide, Math.Max(secondSide, thirdSide));
+            if (firstSide == max)
+            {
+                return (secondSide * thirdSide) / 2;
+            }
+            if (secondSide == max)
+            {
+                return (firstSide * thirdSide) / 2;
+            }
+            if (thirdSide == max)
+            {
+                return (firstSide*secondSide) / 2;
+            }
             return square;
         }
     }
