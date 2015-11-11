@@ -30,13 +30,13 @@ namespace RightTriangleTest
         [TestMethod]
         public void PythagoreanTriple()
         {
-            Assert.AreEqual(6, MathMethods.RightTriangleSquare(5, 12, 13));
-            Assert.AreEqual(6, MathMethods.RightTriangleSquare(8, 15, 17));
-            Assert.AreEqual(6, MathMethods.RightTriangleSquare(7, 24, 25));
-            Assert.AreEqual(6, MathMethods.RightTriangleSquare(20, 21, 29));
-            Assert.AreEqual(6, MathMethods.RightTriangleSquare(12, 35, 37));
-            Assert.AreEqual(6, MathMethods.RightTriangleSquare(161, 240, 289));
-            Assert.AreEqual(6, MathMethods.RightTriangleSquare(95, 168, 193));
+            Assert.AreEqual(30, MathMethods.RightTriangleSquare(5, 12, 13));
+            Assert.AreEqual(60, MathMethods.RightTriangleSquare(8, 15, 17));
+            Assert.AreEqual(84, MathMethods.RightTriangleSquare(7, 24, 25));
+            Assert.AreEqual(210, MathMethods.RightTriangleSquare(20, 21, 29));
+            Assert.AreEqual(210, MathMethods.RightTriangleSquare(12, 35, 37));
+            Assert.AreEqual(19320, MathMethods.RightTriangleSquare(161, 240, 289));
+            Assert.AreEqual(7980, MathMethods.RightTriangleSquare(95, 168, 193));
         }
 
     }
