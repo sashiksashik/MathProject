@@ -5,7 +5,7 @@ using MathProject;
 namespace RightTriangleTest
 {
     [TestClass]
-    public class UnitTest1
+    public class RightTriangleTest
     {
         [TestMethod]
         public void CorrectSymmetryComputationIntegerValues()
@@ -38,6 +38,11 @@ namespace RightTriangleTest
             Assert.AreEqual(19320, MathMethods.RightTriangleSquare(161, 240, 289));
             Assert.AreEqual(7980, MathMethods.RightTriangleSquare(95, 168, 193));
         }
-
+        [TestMethod]
+        public void FloatComputation()
+        {
+            Assert.AreEqual(1.5*2.5/2, MathMethods.RightTriangleSquare(2.5, 1.5, Math.Sqrt(8.5)));
+        }
+        
     }
 }
