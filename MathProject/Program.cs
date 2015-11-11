@@ -18,21 +18,30 @@ namespace MathProject
     {
         public static double RightTriangleSquare(double firstSide, double secondSide, double thirdSide)
         {
-            double square = 0;
+            if (firstSide <= 0) throw new ArgumentException("Side one should be greater than zero.");
+            if (secondSide <= 0) throw new ArgumentException("Side one should be greater than zero.");
+            if (thirdSide <= 0) throw new ArgumentException("Side one should be greater than zero.");
             double max = Math.Max(firstSide, Math.Max(secondSide, thirdSide));
+            if (2 * max > (firstSide + secondSide + thirdSide)) throw new ArgumentException("This triangle does not exists.");
             if (firstSide == max)
             {
-                return (secondSide * thirdSide) / 2;
+                if (Math.Pow(firstSide, 2) == Math.Pow(secondSide, 2) + Math.Pow(thirdSide, 2)){
+                    return (secondSide * thirdSide) / 2;
+                }
             }
             if (secondSide == max)
             {
-                return (firstSide * thirdSide) / 2;
+                if (Math.Pow(secondSide, 2) == Math.Pow(firstSide, 2) + Math.Pow(thirdSide, 2)){
+                    return (firstSide * thirdSide) / 2;
+                }
             }
             if (thirdSide == max)
             {
-                return (firstSide*secondSide) / 2;
+                if (Math.Pow(thirdSide, 2) == Math.Pow(firstSide, 2) + Math.Pow(secondSide, 2)){
+                    return (firstSide * secondSide) / 2;
+                }
             }
-            return square;
+            throw new ArgumentException("This is not a right-angled triangle.");
         }
     }
 }
